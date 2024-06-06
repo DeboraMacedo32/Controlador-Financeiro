@@ -1,0 +1,21 @@
+.row-buttons buttun,
+linha-botoes a {
+    margin: 8px 8px 0px 0px,
+}
+
+.form-default {
+display: flex;
+flex-direction: column;
+}
+
+.form-default > * {
+    padding: 15px;
+}
+
+.component-container {
+    padding: 15px;
+}
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

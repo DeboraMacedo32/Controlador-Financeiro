@@ -1,0 +1,30 @@
+<mat-toolbar>Lançar transações </mat-toolbar>
+<div class="component-container">
+    <form class="form-padrao" *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="formGroup.valid && salvar()" novalidate>
+        <mat-form-field>
+            <input matInput placeholder="Data" formControlName="data" required autocomplete="off">
+            <mat-error>
+                Campo é obrigatório
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Tipo" formControlName="tipo" required autocomplete="off">
+            <mat-error>
+                Campo é obrigatório
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Valor" formControlName="valor" required autocomplete="off">
+            <mat-error>
+                Campo é obrigatório
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Texto" formControlName="texto" required autocomplete="off">
+        </mat-form-field>
+        <div class="linha-botoes">
+            <button mat-flat-button color="primary" [disabled]="!formGroup.valid">Salvar</button>
+            <button type="button" mat-raise-button routerLink="/itens">Cancelar</button>
+        </div> 
+    </form>
+</div>

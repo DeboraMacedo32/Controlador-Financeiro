@@ -1,0 +1,46 @@
+{
+  "itens": [
+    {
+      "id": "1",
+      "data": "04/05/2024",
+      "tipo": "boleto",
+      "valor": 100,
+      "texto": "Observação"
+    },
+    {
+      "id": "2",
+      "data": "06/05/2024",
+      "tipo": "dinheiro",
+      "valor": 50,
+      "texto": "Observação"
+    },
+    {
+      "id": "3",
+      "data": "03/05/2024",
+      "tipo": "cartão de credito",
+      "valor": 75,
+      "texto": "Observação"
+    },
+    {
+      "id": "4",
+      "data": "06/05/2024",
+      "tipo": "débito",
+      "valor": 120,
+      "texto": "Observação"
+    },
+    {
+      "id": "7a30",
+      "data": "06/06/2024",
+      "tipo": "cartão de credito",
+      "valor": "20,50",
+      "texto": "pastel"
+    },
+    {
+      "id": "bf67",
+      "data": "06/06/2024",
+      "tipo": "pix",
+      "valor": "20,50",
+      "texto": "pastel"
+    }
+  ]
+}

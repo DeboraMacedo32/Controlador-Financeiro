@@ -1,0 +1,39 @@
+<mat-toolbar>Listar Lançamentos</mat-toolbar>
+<ng-template #carregando>
+    <mat-spinner></mat-spinner>
+ </ng-template>
+<div class="component-container">
+    <div *ngIf="itens$ | async as itens; else carregando">
+        <table mat-table [dataSource]="itens">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>Id </th>
+                <th mat-cel *matCellDef="let item">{{item.id}}</th>
+            </ng-container>
+            <ng-container matColumnDef="data">
+                <th mat-header-cell *matHeaderCellDef>Data</th>
+                <td mat-cell *matCellDef="let item">{{item.data}}</td>
+            </ng-container>
+            <ng-container matColumnDef="tipo">
+                <th mat-header-cell *matHeaderCellDef>Tipo</th>
+                <td mat-cell *matCellDef="let item">{{item.tipo}}</td>
+            </ng-container>
+            <ng-container matColumnDef="valor">
+                <th mat-header-cell *matHeaderCellDef>Valor</th>
+                <td mat-cell *matCellDef="let item">{{item.valor}}</td>
+            </ng-container>
+            <ng-container matColumnDef="texto">
+                <th mat-header-cell *matHeaderCellDef>Observação</th>
+                <td mat-cell *matCellDef="let item">{{item.texto}}</td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="colunasTabela"></tr>
+            <tr mat-row *matRowDef="let row; columns: colunasTabela;"></tr> 
+        </table>
+    </div>
+    <div>
+        <button mat-flat-button color="primary" routerLink="/itens/cadastrar">Cadastrar</button>
+    </div>
+</div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+
+
