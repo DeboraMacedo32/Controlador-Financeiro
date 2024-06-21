@@ -3,5 +3,6 @@ export interface Item {
     data: string,
     tipo: string,
     valor: number,
-    texto: string
+    texto: string ,
+    categoria: string
 }

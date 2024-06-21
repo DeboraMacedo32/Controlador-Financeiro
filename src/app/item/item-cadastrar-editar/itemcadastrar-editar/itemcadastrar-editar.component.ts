@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ItemService } from '../../../item.service';
 import { Router } from '@angular/router';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
 @Component({
   selector: 'app-itemcadastrar-editar',
   templateUrl: './itemcadastrar-editar.component.html',
@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ItemCadastrarEditarComponent implements OnInit {
 
   public formGroup!: FormGroup;
+  public startDate: any;
 
   constructor(private formBuilder: FormBuilder,
     private itemService: ItemService,
@@ -21,7 +22,8 @@ export class ItemCadastrarEditarComponent implements OnInit {
       data: ["", Validators.required],
       tipo: ["", Validators.required],
       valor: [0, Validators.required],
-      texto: ["", Validators.required]
+      texto: ["", Validators.required],
+      categoria: ['', Validators]
     })
   }
 

@@ -8,6 +8,9 @@ import { MatInputModule} from '@angular/material/input';
 import {  MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { ItemCadastrarEditarComponent } from './itemcadastrar-editar/itemcadastrar-editar.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [ItemCadastrarEditarComponent
@@ -21,7 +24,10 @@ import { ItemCadastrarEditarComponent } from './itemcadastrar-editar/itemcadastr
     MatInputModule,
     
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+    
   ]
 })
 export class ItemCadastrarEditarModule { }
