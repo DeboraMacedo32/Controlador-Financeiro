@@ -6,22 +6,9 @@
           <span class="fs-5 d-none d-sm-inline">Menu</span>
         </a>
         <ul class=" svg-icon nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start " id="menu">
-          <li class="nav-item ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
-            </svg>
-          </li>
           <li>
             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
               <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Economias</span></a>
-          </li>
-          <li>
-            <a href="#" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Planos</span> </a>
           </li>
         </ul>
         <hr>
@@ -46,12 +33,19 @@
           </form>
         </div>
       </nav>
-
-
-
-
-
-
+      <div>
+        <mat-form-field>
+          <mat-label>Month and Year</mat-label>
+          <input matInput [matDatepicker]="dp" >
+          <mat-hint>MM/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="dp" [formControl]="date"></mat-datepicker-toggle>
+          <mat-datepicker #dp
+                          startView="multi-year"
+                          (monthSelected)="setMonthAndYear($event, dp)"
+                          panelClass="example-month-picker">
+          </mat-datepicker>
+        </mat-form-field>
+      </div>
       <div class="container">
         <div class=" card card-cartao poppins-regular">
           <div>
@@ -118,3 +112,18 @@
     </div>
   </div>
 </div>
+<div class="icon-container">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-circle-fill icon-adicionar" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+  </svg>
+</div>
+  <div class="col-12 my-5">
+    <section class="">
+    <footer class="text-center text-white" style="background-color: #0a4275;">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright
+        <a class="text-white" href="#"></a>
+      </div>
+    </footer>
+  </section>
+  </div>

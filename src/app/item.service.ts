@@ -12,7 +12,7 @@ export class ItemService {
   private endpoint = 'itens';
   constructor(private httpClient: HttpClient) { }
 
-  listar(): Observable<Item[]>{ //observable de uma lista de itens
+  listar(): Observable<Item[]>{ 
     return this.httpClient.get<Item[]>(`${this.baseUrl}/${this.endpoint}`);
   }
 
